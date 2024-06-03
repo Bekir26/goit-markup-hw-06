@@ -1,0 +1,371 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary:#4D5AE5;
+    --secondary:#2E2F42;
+    --cloud:#F4F4FD;
+    --footer-bg:#2E2F42;
+    --color-classic: #FFF;
+}
+html{
+    font-size: 16px;
+}
+body{
+    position: relative;
+}
+/* General Css */
+
+.raleway{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.roboto{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.font-weight-700{
+    font-weight: 700;
+}
+.font-weight-500{
+    font-weight: 500;
+}
+.container {
+    padding: 0 1rem;
+}
+/* Header Css */
+
+header .header-nav{
+    width: 100%;
+}
+.header-nav .container{
+    height: 3.5rem; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-nav .logo{
+    display: inline-block;
+    text-transform: uppercase;
+    height: 1.5rem;
+    font-size: 18px;
+    line-height: 21px;
+    padding-top: 3px; 
+}
+.header-nav .menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.logo .first-text{
+    color: var(--primary);
+}
+
+
+/*Main Css*/
+
+main{
+    min-height: calc(100vh - 56px);
+}
+main .greetings{
+    width: 100%;
+    height: 432px;
+    background-image: url("../assets/images/Dark-bg.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative;
+}
+.our-goals .goals-card:first-child{
+    margin-top: 4.5rem;
+}
+.mb-4{
+    margin-bottom: 4.5rem ;
+}
+main .greetings::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2E2F42;
+    opacity: .7;
+    z-index: 1;
+}
+
+/*Section Greetings*/
+
+.greetings .greetings-container{
+    max-width: 216px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: var(--color-classic);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+    z-index: 2;
+
+}
+.greetings-container h1{
+    font-size: 2rem;
+    text-align: center;
+}
+.greetings-container button, footer .subscribe button{
+    text-transform: capitalize;
+    color: var(--color-classic);
+    line-height: 1.5rem;
+    font-weight: 500;
+    background-color: var(--primary);
+    border-radius: 4px;
+    border: 1px solid var(--primary);
+    cursor: pointer;
+}
+.greetings-container button{
+    padding: 1rem 2rem;
+}
+.greetings-container button:hover{
+    opacity: .9;
+}
+
+/*Section Our Goals*/
+
+main .our-goals{
+    width: 100%;
+}
+.goals-card .title{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    color: var(--secondary);
+    text-align: center;
+    margin-bottom: .5rem;
+}
+.goals-card .description{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--secondary);
+    text-align: center;
+}
+
+/* Section Our Team*/
+.team{
+    background-color: var(--cloud);
+}
+.team .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4.5rem;
+    padding: 6rem 1.75rem;
+}
+.team .title{
+    color: #2E2F42;
+    line-height: 2.5rem;
+    font-size: 2.25rem;
+    text-align: center;
+}
+.team .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFF;
+    column-gap: 2rem;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0px 2px 1px 0px #2E2F4229;
+}
+.team .card .card-body{
+    padding: 2rem 1rem;
+}
+
+.team .card-title,.team .card-body .card-job{
+    text-align: center;
+    margin-bottom: .5rem;
+}
+.team .card-title{
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+}
+.team .card-job{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+}
+
+.team .card .social-links{
+    display: flex;
+    column-gap: 1.5rem;
+}
+.team .social-link a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--primary);
+    border-radius: 50%;
+}
+
+/* Section Portfolio */
+.portfolio{
+    background-color: var(--color-classic);
+}
+.portfolio .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4.5rem;
+    padding: 6rem 1.75rem;
+}
+.portfolio .title{
+    color: #2E2F42;
+    line-height: 2.5rem;
+    font-size: 2.25rem;
+    text-align: center;
+}
+.portfolio .card{
+    display: flex;
+    flex-direction: column; 
+    background-color: #FFF;
+    column-gap: 2rem;
+    box-shadow: 0px 2px 1px 0px #2E2F4229;
+}
+.portfolio .card-title,.portfolio .card-body .card-description{
+    text-align: left;
+    margin-bottom: .5rem;
+}
+
+.portfolio .card-title{
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+}
+.portfolio .card .card-body{
+    padding: 2rem 1rem;
+    display: block ;
+}
+.portfolio .card-description{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+}
+
+
+/* Footer */
+
+footer{
+    background-color: var(--footer-bg);
+    color: var(--color-classic);
+}
+footer .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4.5rem;
+    padding: 6rem 1.75rem;
+}
+footer .logo{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    height: 1.5rem;
+    font-size: 18px;
+    line-height: 21px;
+    padding-top: 3px;
+}
+footer .footer-description{
+    width: 100%;
+}
+footer .social-media{
+    width: 100%;
+}
+footer .logo .first-text{
+    color: var(--primary);
+}
+.footer-description .text{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 17.5px;
+}
+footer .social-links{
+    display: flex;
+    justify-content: center;
+    column-gap: 1.5rem;
+}
+footer .social-link a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--primary);
+    border-radius: 50%;
+}
+footer .category-title, footer .subscribe-title{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--color-classic);
+}
+footer .category-title{
+    margin-bottom: 1rem;
+}
+footer .subscribe, footer form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1rem;
+}
+footer .subscribe input{
+    width: 100%;
+    height: 2.5rem;
+    font-size: .75rem;
+    padding: .5rem 1rem;
+    color: var(--color-classic);
+    background-color: transparent;
+    border: 1px solid var(--color-classic) ;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px #00000026;
+    outline: none;
+}
+footer .subscribe button{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    padding: .5rem 1.5rem;
+}
+footer .subscribe button figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .subscribe button img{
+    width: 1.5rem;
+    height: 1.25rem;
+}
+footer .subscribe input::placeholder{
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-classic);
+    opacity: .6;
+}

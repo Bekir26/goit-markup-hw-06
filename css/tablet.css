@@ -1,0 +1,44 @@
+@media (min-width: 768px ){
+    footer .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        row-gap: 4.5rem;
+        column-gap: 1.5rem;
+        padding: 6rem 1.75rem;
+    }
+    footer .footer-description{
+        flex: 1;
+    }
+    footer .social-media{
+        flex: 1;
+    }
+    .footer-description .text{
+        text-align: justify;
+    }
+    footer .footer-description{
+        flex: 1;
+    }
+    footer form{
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        row-gap: 1rem;
+        column-gap: 1.5rem;
+    }
+    footer .subscribe input{
+        width: 50%;
+    }
+    footer .subscribe-title{
+        width: 100%;
+        text-align: left;
+    }
+    footer .social-links{
+        justify-content: flex-start;
+    }
+    footer .category-title{
+        text-align: left;
+    }
+}
