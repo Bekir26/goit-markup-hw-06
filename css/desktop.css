@@ -1,3 +1,77 @@
-@media screen and(min-width: 1158px){
+@media screen and (min-width: 1158px){
+    header .header-nav address{
+        flex-direction: row;
+        column-gap: 2.5rem;
+    }
+    main .greetings{
+        background-image: url("../assets/images/desktop-greetings-bg.png");
+        height: 600px;
+    }
+    .greetings-container h1{
+        font-size: 3.5rem;
+        text-align: center;
+        width: 496px;
+    }
+    .our-goals .goals-card{
+        flex-basis: calc((100% - 4.5rem)/4);
+    }
+    .goals-card figure{
+        display: flex;
+    }
+    .goals-card .title{
+        text-align: center;
+    }
+    .goals-card .description{
+       text-align: justify;
+    }
+    .team .card{
+        flex-basis:  calc((100% - 4.5rem)/4);
+     }
+     .portfolio figure:hover .img-description{
+        display: flex;
+    }
+     .portfolio .card{
+        flex-basis:  calc((100% - 3rem)/3);
+     }
+     .portfolio .card figure,  .portfolio .card img{
+        width: 100%;
+     }
+    .team .container, .portfolio .container{
+        padding: 9rem 0;
+    }
+    footer .footer-description{
+        padding-right: 1rem;
+    }
+    .footer-description .text{
+        text-align: left;
+    }
+    footer .footer-description, footer .social-media {
+        flex: 1 0 calc((100% - 3rem)/4);
+    }
+    footer .subscribe{
+        flex: 1 0 calc((100% - 3rem)/2);
+    }
+    footer form{
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 1.5rem;
+    }
+    footer .subscribe input{
+        flex-basis: calc(((100% - 1.5rem)*2)/3);
+    }
+    footer .subscribe button{
+        flex-basis: calc((100% - 1.5rem)/3);
+    }
+    footer .logo{
+        justify-content: flex-start;
+    }
+
+    .modal{
+        padding: 1rem 1rem;
+    }
+    .modal .modal-container{
+        width: 25%;
+    }
     
 }

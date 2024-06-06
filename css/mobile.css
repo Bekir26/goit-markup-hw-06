@@ -36,11 +36,26 @@ body{
 }
 .container {
     padding: 0 1rem;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
 }
 /* Header Css */
 
-header .header-nav{
-    width: 100%;
+header .header-nav address{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: .75rem;
+}
+header .header-nav address a{
+    text-decoration: none;
+    color: #434455;
+    font-size: .75rem;
+    line-height: .875rem;
+    font-weight: 400;
+    letter-spacing: 4%;
 }
 .header-nav .container{
     height: 3.5rem; 
@@ -49,13 +64,33 @@ header .header-nav{
     justify-content: space-between;
     align-items: center;
 }
+.header-nav .nav-links{
+    display: none;
+}
+.header-nav .nav-links a{
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    color: var(--secondary);
+    font-size: 1rem;
+    line-height:1.5rem;
+    letter-spacing: 2%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.header-nav .nav-links a.active-link{
+    color: #404BBF;
+    border-bottom: 3px solid #404BBF;
+}
 .header-nav .logo{
-    display: inline-block;
+    display: flex;
+    align-items: center;
     text-transform: uppercase;
     height: 1.5rem;
     font-size: 18px;
     line-height: 21px;
     padding-top: 3px; 
+    height: 100%;
 }
 .header-nav .menu{
     display: flex;
@@ -85,12 +120,7 @@ main .greetings{
     background-size:cover;
     position: relative;
 }
-.our-goals .goals-card:first-child{
-    margin-top: 4.5rem;
-}
-.mb-4{
-    margin-bottom: 4.5rem ;
-}
+
 main .greetings::after{
     content: "";
     position: absolute;
@@ -126,7 +156,7 @@ main .greetings::after{
     font-size: 2rem;
     text-align: center;
 }
-.greetings-container button, footer .subscribe button{
+.greetings-container button, footer .subscribe button, .modal .contact .send-btn{
     text-transform: capitalize;
     color: var(--color-classic);
     line-height: 1.5rem;
@@ -146,6 +176,27 @@ main .greetings::after{
 /*Section Our Goals*/
 
 main .our-goals{
+    margin: 6rem 0;
+}
+
+.our-goals .container{
+    display: flex;
+    flex-direction: column;
+    column-gap: 1.5rem;
+    row-gap: 4.5rem;
+    width: 100%;
+}
+.our-goals .goals-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.goals-card figure{
+    display: none;
+    margin-bottom: .5rem;
+}
+.goals-card figure, .goals-card img{
     width: 100%;
 }
 .goals-card .title{
@@ -154,23 +205,26 @@ main .our-goals{
     color: var(--secondary);
     text-align: center;
     margin-bottom: .5rem;
+    width: 100%;
 }
 .goals-card .description{
     font-size: 1rem;
     line-height: 1.5rem;
     color: var(--secondary);
     text-align: center;
+    width: 100%;
 }
 
 /* Section Our Team*/
 .team{
     background-color: var(--cloud);
 }
-.team .container{
+.team .container, .portfolio .container{
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 4.5rem;
+    column-gap: 1.5rem;
     padding: 6rem 1.75rem;
 }
 .team .title{
@@ -178,6 +232,8 @@ main .our-goals{
     line-height: 2.5rem;
     font-size: 2.25rem;
     text-align: center;
+    flex-basis: 100%;
+    margin-bottom: 4.5rem;
 }
 .team .card{
     display: flex;
@@ -224,18 +280,34 @@ main .our-goals{
 .portfolio{
     background-color: var(--color-classic);
 }
-.portfolio .container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 4.5rem;
-    padding: 6rem 1.75rem;
+.portfolio figure{
+    position: relative;
+    cursor: pointer;
+}
+
+.portfolio figure .img-description{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    z-index: 5;
+    padding: 2.5rem 2rem;
+    color: var(--color-classic);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 2%;
+    font-weight: 400;
+    display: none;
 }
 .portfolio .title{
     color: #2E2F42;
     line-height: 2.5rem;
     font-size: 2.25rem;
     text-align: center;
+    flex-basis: 100%;
+    margin-bottom: 4.5rem;
 }
 .portfolio .card{
     display: flex;
@@ -243,6 +315,7 @@ main .our-goals{
     background-color: #FFF;
     column-gap: 2rem;
     box-shadow: 0px 2px 1px 0px #2E2F4229;
+    position: relative;
 }
 .portfolio .card-title,.portfolio .card-body .card-description{
     text-align: left;
@@ -275,6 +348,7 @@ footer .container{
     flex-direction: column;
     align-items: center;
     row-gap: 4.5rem;
+    column-gap: 1rem;
     padding: 6rem 1.75rem;
 }
 footer .logo{
@@ -369,3 +443,240 @@ footer .subscribe input::placeholder{
     color: var(--color-classic);
     opacity: .6;
 }
+
+/*Menu*/
+
+.mobile-menu, .modal{
+    padding: 1.5rem 1rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100dvh;
+    z-index: 10;
+    display: none;
+}
+.mobile-menu{
+    background-color: var(--color-classic);
+}
+.modal .modal-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: var(--color-classic);
+    z-index: 10;
+}
+.mobile-menu{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.mobile-menu .menu-header, .mobile-menu .menu-footer{
+    width: 100%;
+}
+.mobile-menu .menu-header,.mobile-menu .menu-footer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+.mobile-menu .close-container, .modal .close-container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.close-container .close{
+    padding: .5rem;
+    border: 1px solid #E7E9FC;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-menu .mobile-nav{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+}
+
+.mobile-menu .link{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--secondary);
+}
+.mobile-menu ul{
+    list-style-type: none;
+}
+/* Mobile Menu Header */
+
+.mobile-nav .link{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    color: var(--secondary);
+}
+.mobile-menu li:first-child a{
+    color: var(--primary);
+}
+
+/*Mobile Menu Footer*/
+
+.mobile-menu{
+    display: none;
+}
+
+.menu-footer .link{
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+}
+.menu-footer address ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+.menu-footer .social-links{
+    display: flex;
+    row-gap: 2.5rem;
+    column-gap: 1.5rem;
+
+}
+.menu-footer .social-link a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--primary);
+    border-radius: 50%;
+}
+
+
+/* Modal */
+.modal{
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    padding: .5rem 1rem;
+}
+.modal::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--secondary);
+    opacity: .7;
+    z-index: 2;
+}
+.modal .close{
+    background-color: #E7E9FC;
+}
+.modal-main{
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+
+}
+.modal .privacy{
+    color: #8E8F99;
+}
+.modal-main .title{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--secondary);
+    text-align: center;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+.contact .input-container{
+    position: relative;
+}
+
+.contact .contact-label{
+    font-size: .75rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: .875rem;
+    color: #8E8F99;
+    margin-bottom: .25rem;
+}
+.contact .privacy-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: .5rem;
+    margin-top: .5rem;
+    margin-bottom: 2.5rem;
+}
+.contact #privacy{
+    width: 1rem;
+    height: 1rem;
+    border-radius: .25rem;
+    border: 1px solid #8E8F99;
+}
+.contact .privacy .privacy-link{
+    display: block;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--primary);
+}
+.input-container .icon{
+    position: absolute;
+    left: 1rem;
+    top: .5rem;
+    padding: 3px 0;
+}
+
+.contact input[type="text"],.contact input[type="tel"],.contact input[type="email"]{
+    width: 100%;
+    height: 2.5rem;
+    border-radius: .25rem;
+    border: 1px solid #8E8F99;
+    outline: none;
+    padding-left: 2.5rem;
+    padding-right: 1rem;
+}
+.contact textarea{
+    width: 100%;
+    height: 6.6rem;
+    border-radius: .25rem;
+    border: 1px solid #8E8F99;
+    padding: 1rem;
+    outline: none;
+    resize: none;
+    font-size: .75rem;
+    line-height: .875rem;
+    font-weight: 400;
+}
+.contact textarea::placeholder{
+    font-size: .75rem;
+    line-height: .875rem;
+    color: #8E8F99;
+    letter-spacing: 4%;
+}
+
+.container-send{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .container-send .send-btn{
+    padding: 1.2rem 4rem;
+}
+.is-open{
+    display: flex;
+}
+

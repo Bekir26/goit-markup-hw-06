@@ -1,13 +1,63 @@
-@media (min-width: 768px ){
-    footer .container{
+@media screen and (min-width: 768px ){
+    .header-nav .container{
+        align-items: stretch;
+    }
+    header .header-nav address{
         display: flex;
+    }
+    .header-nav .nav-links{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: stretch;
+        column-gap: 2.5rem;
+        list-style-type: none;
+    }
+    .header-nav .menu{
+        display: none;
+    }
+    main .greetings{
+        background-image: url("../assets/images/tablet-greetings-bg.png");
+    }
+    .our-goals .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .our-goals .goals-card{
+        flex-basis: calc((100% - 3rem)/2);
+    }
+
+    .goals-card .title, .goals-card .description{
+        text-align:left;
+    }
+
+    /*Section Team*/
+    .team .container,.portfolio .container{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .team .container{
+        padding: 6rem 6.75rem;
+    }
+    .portfolio .container{
+        padding: 6rem 1rem;
+    }
+    .team .card, .portfolio .card{
+       flex-basis:  calc((100%-1.5rem)/2);
+    }
+
+
+    footer .container{
         flex-direction: row;
         justify-content: flex-start;
         align-items: flex-start;
         flex-wrap: wrap;
-        row-gap: 4.5rem;
-        column-gap: 1.5rem;
-        padding: 6rem 1.75rem;
     }
     footer .footer-description{
         flex: 1;
@@ -18,18 +68,19 @@
     .footer-description .text{
         text-align: justify;
     }
-    footer .footer-description{
-        flex: 1;
-    }
+
     footer form{
         flex-direction: row;
         justify-content: flex-start;
         align-items: flex-start;
-        row-gap: 1rem;
+        flex-wrap: wrap;
         column-gap: 1.5rem;
     }
     footer .subscribe input{
-        width: 50%;
+        flex-basis: calc(50% - .75rem);
+    }
+    footer .subscribe .subscribe-btn-container{
+        flex: 1;
     }
     footer .subscribe-title{
         width: 100%;
@@ -40,5 +91,23 @@
     }
     footer .category-title{
         text-align: left;
+    }
+
+    .modal{
+        padding: 1rem 1rem;
+    }
+    .modal .modal-container{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        height: max-content;
+        width: 50%;
+        padding: 1rem;
+        border-radius: 4px;
+        background-color: var(--color-classic);
+        z-index: 10;
+    }
+    .contact .privacy .privacy-link{
+        display: inline-block;
     }
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Bekir Duman" />
-    <meta name="description" content="Solution System" />
+    <meta name="description" content="Effective Solutions for Your Business" />
     <title>WEB STUDIO</title>
 
     <!-- Google Fonts (Relaway, Roboto) -->
@@ -27,6 +27,15 @@
           <div class="logo roboto font-weight-700">
             <span class="first-text">Web</span>Studio
           </div>
+          <ul class="nav-links">
+            <li><a class="roboto font-weight-500 active-link" href="#">Studio</a></li>
+            <li><a class="roboto font-weight-500" href="#">Portfolio</a></li>
+            <li><a class="roboto font-weight-500" href="#">Contacts</a></li>
+          </ul>
+          <address>
+            <a class="roboto" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            <a class="roboto" href="tel:+11 (000) 111-11-11">+11 (000) 111-11-11</a>
+          </address>
           <figure class="menu">
             <img src="./assets/images/hamburger-menu.png" alt="menu" />
           </figure>
@@ -39,12 +48,15 @@
           <h1 class="roboto font-weight-700">
             Effective Solutions for Your Business
           </h1>
-          <button class="roboto font-weight-500">Order Service</button>
+          <button class="roboto font-weight-500 modal-btn">Order Service</button>
         </div>
       </section>
       <section class="our-goals roboto">
         <div class="container">
           <div class="goals-card roboto mb-4">
+            <figure>
+              <img src="./assets/images/Our Goals/Icon 1.png" alt="icon1">
+            </figure>
             <h2 class="title font-weight-700">Strategy</h2>
             <p class="description">
               Our goal is to identify the business problem to walk away with the
@@ -52,6 +64,9 @@
             </p>
           </div>
           <div class="goals-card roboto mb-4">
+            <figure>
+              <img src="./assets/images/Our Goals/Icon 2.png" alt="icon2">
+            </figure>
             <h2 class="title font-weight-700">Punctuality</h2>
             <p class="description">
               Bring the key message to the brand's audience for the best price
@@ -59,6 +74,9 @@
             </p>
           </div>
           <div class="goals-card roboto mb-4">
+            <figure>
+              <img src="./assets/images/Our Goals/Icon 3.png" alt="icon3">
+            </figure>
             <h2 class="title font-weight-700">Diligence</h2>
             <p class="description">
               Research and confirm brands that present the strongest digital
@@ -66,6 +84,9 @@
             </p>
           </div>
           <div class="goals-card roboto mb-4">
+            <figure>
+              <img src="./assets/images/Our Goals/Icon 4.png" alt="icon4">
+            </figure>
             <h2 class="title font-weight-700">Technologies</h2>
             <p class="description">
               Design practice focused on digital experiences. We bring forth a
@@ -248,6 +269,7 @@
                 src="./assets/images/Card Portfolio/Card Sample photo 1.png"
                 alt="sample 1 image"
               />
+              <p class="img-description roboto">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
             </figure>
             <figcaption class="card-body roboto">
               <h4 class="card-title font-weight-500">Banking App</h4>
@@ -260,6 +282,7 @@
                 src="./assets/images/Card Portfolio/imgSample2.png"
                 alt="imgSample2 image"
               />
+              <p class="img-description roboto">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
             </figure>
             <figcaption class="card-body roboto">
               <h4 class="card-title font-weight-500">Cashless Payment</h4>
@@ -272,6 +295,7 @@
                 src="./assets/images/Card Portfolio/imgSample3.png"
                 alt="imgSample3 image"
               />
+              <p class="img-description roboto">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
             </figure>
             <figcaption class="card-body roboto">
               <h4 class="card-title font-weight-500">Meditation App</h4>
@@ -284,6 +308,7 @@
                 src="./assets/images/Card Portfolio/imgSample4.png"
                 alt="sample 4 image"
               />
+              <p class="img-description roboto">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
             </figure>
             <figcaption class="card-body roboto">
               <h4 class="card-title font-weight-500">Taxi Service</h4>
@@ -296,6 +321,7 @@
                 src="./assets/images/Card Portfolio/imgSample5.png"
                 alt="sample 5 image"
               />
+              <p class="img-description roboto">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
             </figure>
             <figcaption class="card-body roboto">
               <h4 class="card-title font-weight-500">Screen Illustrations</h4>
@@ -308,6 +334,7 @@
                 src="./assets/images/Card Portfolio/imgSample6.png"
                 alt="imgSample6 image"
               />
+              <p class="img-description roboto">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
             </figure>
             <figcaption class="card-body roboto">
               <h4 class="card-title font-weight-500">Online Courses</h4>
@@ -365,18 +392,165 @@
           <h4 class="subscribe-title roboto font-weight-700">Subscribe</h4>
           <form action="#">
             <input type="text roboto" placeholder="E-mail" />
-            <button class="roboto font-weight-500">
-              Subscribe
-              <figure>
-                <img
-                  src="./assets/images/Logo/Footer/telegram.png"
-                  alt="telegram"
-                />
-              </figure>
-            </button>
+            <div class=" subscribe-btn-container">
+              <button class="roboto font-weight-500">
+                Subscribe
+                <figure>
+                  <img
+                    src="./assets/images/Logo/Footer/telegram.png"
+                    alt="telegram"
+                  />
+                </figure>
+              </button>
+            </div>
           </form>
         </div>
       </div>
     </footer>
+    <div class="mobile-menu">
+      <div class="menu-header">
+        <div class="close-container">
+          <figure class="close">
+            <img
+              class="mobile-menu-btn"
+              src="./assets/images/Logo/close.png"
+              alt="close"
+            />
+          </figure>
+        </div>
+        <nav>
+          <ul class="mobile-nav roboto font-weight-700">
+            <li><a class="link" href="#">Studio</a></li>
+            <li><a class="link" href="#">Portfolio</a></li>
+            <li><a class="link" href="#">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="menu-footer">
+        <address>
+          <ul>
+            <li>
+              <a
+                class="link roboto font-weight-500"
+                href="tel:+11 (000) 111-11-11"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li>
+              <a
+                class="link roboto font-weight-500"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </address>
+        <div class="social-links">
+          <figure class="social-link">
+            <a href="#"
+              ><img
+                src="./assets/images/Logo/Footer/instagram 2.png"
+                alt="instagram"
+            /></a>
+          </figure>
+          <figure class="social-link">
+            <a href="#"
+              ><img
+                src="./assets/images/Logo/Footer/twitter2.png"
+                alt="twitter"
+            /></a>
+          </figure>
+          <figure class="social-link">
+            <a href="#"
+              ><img
+                src="./assets/images/Logo/Footer/facebook2.png"
+                alt="facebook"
+            /></a>
+          </figure>
+          <figure class="social-link">
+            <a href="#"
+              ><img
+                src="./assets/images/Logo/Footer/linkedin2.png"
+                alt="linkedin"
+            /></a>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal-container">
+        <div class="modal-header">
+          <div class="close-container">
+            <figure class="close">
+              <img
+                class="mobile-menu-btn"
+                src="./assets/images/Logo/close.png"
+                alt="close"
+              />
+            </figure>
+          </div>
+        </div>
+        <div class="modal-main">
+          <h4 class="title roboto font-weight-500">
+            Leave your contacts and we will call you back
+          </h4>
+          <form action="#" class="contact">
+            <div class="input-group">
+              <label class="contact-label roboto" for="contact-name">Name</label>
+              <div class="input-container">
+                <figure class="icon">
+                  <img src="./assets/images/Form/VectorFormUser.png" alt="user" />
+                </figure>
+                <input id="contact-name" name="contact-name" type="text" />
+              </div>
+            </div>
+            <div class="input-group">
+              <label class="contact-label roboto" for="contact-phone"
+                >Phone</label
+              >
+              <div class="input-container">
+                <figure class="icon">
+                  <img src="./assets/images/Form/VectorPhone.png" alt="phone" />
+                </figure>
+                <input id="contact-phone" name="contact-phone" type="tel" />
+              </div>
+            </div>
+            <div class="input-group">
+              <label class="contact-label roboto" for="contact-mail">Mail</label>
+              <div class="input-container">
+                <figure class="icon">
+                  <img src="./assets/images/Form/VectorMail.png" alt="mail" />
+                </figure>
+                <input id="contact-mail" name="contact-mail" type="email" />
+              </div>
+            </div>
+            <div class="input-group">
+              <label class="contact-label roboto" for="contact-comment"
+                >Comment</label
+              >
+              <div class="input-group">
+                <textarea
+                  id="contact-comment"
+                  class="roboto"
+                  placeholder="Text Input"
+                ></textarea>
+              </div>
+              <div class="input-group privacy-container roboto">
+                <input type="checkbox" id="privacy" />
+                <label class="privacy" for="privacy">
+                  I accept the terms and conditions of the <a class="privacy-link" href="#">Privacy Policy</a>
+                </label>
+              </div>
+              <div class="input-group container-send">
+                <input type="submit" class="roboto font-weight-500 send-btn" value="Send">
+                </input>
+              </div>
+              </div>
+            </div> 
+      </div>
+        </form>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
   </body>
 </html>
